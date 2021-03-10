@@ -144,7 +144,7 @@ function Invoke-AzureHound {
     # Enumerate users
     $Coll = New-Object System.Collections.ArrayList
     Write-Info "Building users object, this may take a few minutes."
-	$AADUsers = Get-AzureADUser -All $True | Select UserPrincipalName,OnPremisesSecurityIdentifier,ObjectID,TenantId
+	$AADUsers = Get-AzureADUser -All $True | Select UserPrincipalName,OnPremisesSecurityIdentifier,ObjectID,TenantId,AccountEnabled
     $TotalCount = $AADUsers.Count
     Write-Host "Done building users object, processing ${TotalCount} users"
     $Progress = 0
