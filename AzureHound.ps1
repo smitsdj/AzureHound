@@ -175,6 +175,7 @@ function Invoke-AzureHound {
             OnPremisesSecurityIdentifier    =   $User.OnPremisesSecurityIdentifier
             ObjectID                        =   $User.ObjectID
             TenantID                        =   $CurrentUserTenantID
+            AccountEnabled                  =   $User.AccountEnabled
         }
         
         $null = $Coll.Add($CurrentUser)
